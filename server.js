@@ -42,7 +42,7 @@ function scheduleJob(job) {
 
 (async () => {
   await loadJobs();
-  jobs.forEach(scheduleJob());
+  jobs.forEach(job => scheduleJob(job));
 
   const app = express();
   app.use(cors());
